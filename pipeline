@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Playbook Load') {
             steps {
-                echo 'Hello World'
+                echo 'The playbook has loaded'
             }
         }
         stage('Unit Testing') {
