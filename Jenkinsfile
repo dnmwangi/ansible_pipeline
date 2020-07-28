@@ -4,6 +4,8 @@ pipeline {
     stages {
         stage('Load Updated playbook') {
             steps {
+                git 'https://github.com/dnmwangi/ansible_lab.git'
+                slackSend channel: '#jenkins-notifications', failOnError: true, message: 'Stage1 : Playbook load successfull', teamDomain: 'ust-fzr2841.slack.com'
                 echo 'Playbook Load Successfull'
             }
         }
